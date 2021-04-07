@@ -1,0 +1,29 @@
+{
+  "name": "crud_todolist",
+  "version": "1.0.0",
+  "description": "CRUD practice by making a To Do list",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghmanjurr/CRUD_ToDoList.git"
+  },
+  "keywords": [
+    "To-do",
+    "list"
+  ],
+  "author": "Ghalib Manjurr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghmanjurr/CRUD_ToDoList/issues"
+  },
+  "homepage": "https://github.com/ghmanjurr/CRUD_ToDoList#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.6"
+  }
+}
