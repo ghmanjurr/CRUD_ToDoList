@@ -22,7 +22,11 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    db.collection('todos').find().toArray()
+    .then(data => {
+        res.render('index.ejs', {zebra: data})
+    })
+    
 })
 
 //route that will hear the POST
