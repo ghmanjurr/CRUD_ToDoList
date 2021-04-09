@@ -26,7 +26,6 @@ app.get('/', (req, res) => {
     .then(data => {
         res.render('index.ejs', {zebra: data})
     })
-    
 })
 
 //route that will hear the POST
@@ -38,6 +37,15 @@ app.post('/createToDo', (req, res) => {
     })
     //console.log(req.body.todoItem)
     
+})
+
+//route to delete
+app.delete('/deleteTodo', (req, res)=>{
+    db.collection('todos').deleteOne({todo: req.body.rainbowUnicorn})
+    .then(result =>{
+        console.log('todo item deleted')
+        res.json('Deleted it')
+    })
 })
 
 app.listen(PORT, () => {

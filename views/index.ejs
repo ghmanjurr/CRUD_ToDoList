@@ -12,6 +12,7 @@
     <% for(let i=0; i<zebra.length; i++) { %>
         <li>
             <span> <%=zebra[i].todo%></span>
+            <span class='del'>[DELETE]</span>
         </li>
 
     <% } %>
@@ -21,5 +22,7 @@
         <input type="text" placeholder="Enter To Do Item" name='todoItem'>
         <input type="submit">
     </form>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
