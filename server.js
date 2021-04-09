@@ -39,6 +39,32 @@ app.post('/createToDo', (req, res) => {
     
 })
 
+//route to mark todo item completed
+app.put('/markComplete', (req, res)=>{
+    db.collection('todos').updateOne({todo: req.body.rainbowUnicorn}, {
+        $set: {
+            completed: true
+        }
+    })
+    .then(result =>{
+        console.log('Marked Complete')
+        res.json('Marked Complete')
+    })
+})
+
+//route to mark UNDO item completed
+app.put('/undo', (req, res)=>{
+    db.collection('todos').updateOne({todo: req.body.rainbowUnicorn}, {
+        $set: {
+            completed: false
+        }
+    })
+    .then(result =>{
+        console.log('Marked Complete')
+        res.json('Marked Complete')
+    })
+})
+
 //route to delete
 app.delete('/deleteTodo', (req, res)=>{
     db.collection('todos').deleteOne({todo: req.body.rainbowUnicorn})
@@ -47,6 +73,7 @@ app.delete('/deleteTodo', (req, res)=>{
         res.json('Deleted it')
     })
 })
+
 
 app.listen(PORT, () => {
     console.log('Server is running, you better catch it!')

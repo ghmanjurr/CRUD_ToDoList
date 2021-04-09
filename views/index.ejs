@@ -11,11 +11,11 @@
     <h1>To Do's</h1>
     <ul>
     <% for(let i=0; i<zebra.length; i++) { %>
-        <li>
+        <li class='todoItem'>
             <% if(zebra[i].completed === true) {%>
-            <span class='completed'><%=zebra[i].todo%></span>
+            <span class='completed'><%= zebra[i].todo %></span>
             <% }else{ %>
-            <span><%=zebra[i].todo%></span>
+            <span><%= zebra[i].todo %></span>
             <% } %>  
             <span class='del'>[DELETE]</span>
         </li>
