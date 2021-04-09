@@ -3,6 +3,7 @@ const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 2121
 
+//connect to database
 let db,
     dbConnectionStr = 'mongodb+srv://demo:demo@cluster0.xcdy5.mongodb.net/todo?retryWrites=true&w=majority',
     dbName = 'todo'
