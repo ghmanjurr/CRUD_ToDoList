@@ -39,4 +39,13 @@ h1{
 button{
     height: 25px;
     width: 75px;
+    box-shadow: 0px 5px 5px #57aba7,
+				0px -5px 5px #a6fffa,
+				inset 0px -5px 5px #57aba7,
+				inset 0px 5px 5px #a6fffa;
+    font-size: 14px;
+    color: #050505;
+	background: #6dd6d1;
+	cursor: pointer;
+	transition: 1500ms;
 }
