@@ -6,6 +6,7 @@ h1{
 .completed{
     text-decoration: line-through;
     color: red;
+    font-weight: bold;
 }
 
 .todoItem{
