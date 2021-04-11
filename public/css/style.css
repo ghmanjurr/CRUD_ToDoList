@@ -36,6 +36,7 @@ h1{
     
 }
 
-.del{
-    display: inline-block;
+button{
+    height: 25px;
+    width: 75px;
 }
