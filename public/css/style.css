@@ -47,5 +47,17 @@ button{
     color: #050505;
 	background: #6dd6d1;
 	cursor: pointer;
-	transition: 1500ms;
+	transition: 500ms;
+}
+
+button:hover {
+	border: 5px dotted #6dd6d1;
+	box-shadow: 0px 5px 5px #57aba7,
+				0px -5px 5px #a6fffa,
+				inset 0px -5px 5px #a6fffa,
+				inset 0px 5px 5px #57aba7;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000000;
+	animation: hueRotation 1s linear infinite;
 }
