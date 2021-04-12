@@ -22,6 +22,8 @@
     <% } %>
     </ul>
 
+    <h2>Things left to do: <%= left %></h2>
+
     <form action="/createToDo" method='POST'>
         <input type="text" placeholder="Enter To Do Item" name='todoItem'>
         <input type="submit">
