@@ -64,5 +64,4 @@ button:hover {
 	font-size: 14px;
 	font-weight: bold;
 	color: #000000;
-	animation: hueRotation 1s linear infinite;
 }
