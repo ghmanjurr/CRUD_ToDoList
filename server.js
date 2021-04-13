@@ -23,11 +23,15 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 
-app.get('/', (req, res) => {
-    db.collection('todos').find().toArray()
-    .then(data => {
-        res.render('index.ejs', {zebra: data})
-    })
+app.get('/', async (req, res) => {
+    const todoItems = await db.collection('todos').find().toArray()
+    const itemsLeft = await db.collection('todos').countDocuments(
+        {completed: false})
+    res.render('index.ejs', {zebra: todoItems, left: itemsLeft})
+    // db.collection('todos').find().toArray()
+    // .then(data => {
+    //     res.render('index.ejs', {zebra: data, left: itemsLeft})
+    // })
 })
 
 //route that will hear the POST
